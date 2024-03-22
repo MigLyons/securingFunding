@@ -1,0 +1,7 @@
+{
+  "name": "securingfunding_ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
