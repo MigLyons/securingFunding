@@ -1,0 +1,19 @@
+
+form {
+    text-align: center;
+}
+
+button {
+    color: #B27092;
+    background-color: #FFE9F3;
+    padding: 16px;
+    margin: 16px;
+}
+
+label {
+    margin-right: 8px;
+}
+
+#firebaseui-auth-container{
+
+}

@@ -1,4 +1,4 @@
-import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/react';
+import { IonApp, IonHeader, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
@@ -31,14 +31,33 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Toolbar_001 from './components/Toolbar';
+import { useEffect, useState } from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
+import firebase from 'firebase/compat/app';
 
 setupIonicReact();
 
 
 const App: React.FC = () => {
+
+  /*const[user, setUser] = useState({});
+  useEffect(() => {
+    onAuthStateChanged(firebase.auth(), (user) => {
+      if (user) {
+        setUser({ email: user.email, uid: user.uid });
+      }else{
+        setUser({});
+      }
+    });
+  });*/
+
+
   return (
     <IonApp>
       <IonReactRouter>
+        <IonHeader>
+        </IonHeader>
         <IonSplitPane contentId="main">
           <Menu />
           <IonRouterOutlet id="main">
